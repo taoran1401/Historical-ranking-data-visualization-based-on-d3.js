@@ -11,19 +11,23 @@
 
 d3.select("#inputfile").on("change", getCsv);
 function getCsv() {
-  d3.select("#inputfile").attr("hidden", true);
-  var r = new FileReader();
-  r.readAsText(this.files[0], config.encoding);
-  r.onload = function () {
-    //读取完成后，数据保存在对象的result属性中
-    var data = d3.csvParse(this.result);
-    try {
-      draw(data);
-    } catch (error) {
-      alert(error);
-    }
-  };
+  console.log(config.max_number)
 };
+
+// function getCsv() {
+//   d3.select("#inputfile").attr("hidden", true);
+//   var r = new FileReader();
+//   r.readAsText(this.files[0], config.encoding);
+//   r.onload = function () {
+//     //读取完成后，数据保存在对象的result属性中
+//     var data = d3.csvParse(this.result);
+//     try {
+//       draw(data);
+//     } catch (error) {
+//       alert(error);
+//     }
+//   };
+// };
 
 function draw(data) {
   var date = [];

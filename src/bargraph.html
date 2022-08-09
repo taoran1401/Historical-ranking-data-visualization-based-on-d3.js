@@ -12,10 +12,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <title>动态排名数据可视化 ver1.7 By Jannchie</title>
+    <title>数据可视化 - 柱形图动态排名</title>
 </head>
 
 <body>
+    <!-- 
+        介绍：Jannchie的动态排名数据可视化开源项目，为方便配置使用搭建的在线页面
+        项目地址：https://github.com/Jannchie/Historical-ranking-data-visualization-based-on-d3.js
+        使用方法：设置配置(或使用默认配置) - 选择文件
+     -->
+     <div class="set-config">
+        每个时间节点最多显示的条目数: <input type="text" class="max_number" name="max_number" value="20">
+        左侧文字: <input type="text" class="itemLabel" name="itemLabel" value="左侧文字">
+        右侧文字: <input type="text" class="typeLabel" name="typeLabel" value="右侧文字">
+        榜首项目信息的水平位置: <input type="text" class="item_x" name="item_x" value="250">
+        时间点间隔时间: <input type="text" class="interval_time" name="interval_time" value="1">
+        上方文字水平高度: <input type="text" class="text_y" name="text_y" value="-50">
+        右侧文字横坐标: <input type="text" class="text_x" name="text_x" value="1000">
+        偏移量: <input type="text" class="offset" name="offset" value="350">
+        矩形柱是否为圆角矩形: <input type="text" class="rounded_rectangle" name="rounded_rectangle" value="true">
+        是否显示x轴轴线: <input type="text" class="show_x_tick" name="show_x_tick" value="true">
+        全局背景颜色: <input type="text" class="background_color" name="background_color" value="#FFFFFF">
+    </div>
     <center>
         <input type="file" id="inputfile" name="fileContent">
         <svg width="1900" height="1020"></svg>
@@ -27,5 +45,4 @@
         <link rel="stylesheet" href="stylesheet.css">
     </center>
 </body>
-
 </html>
